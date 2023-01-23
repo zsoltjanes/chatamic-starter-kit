@@ -3,7 +3,10 @@
     "extra": {
         "statamic": {
             "name": "Chatamic Starter Kit",
-            "description": "Chatamic Starter Kit starter kit"
+            "description": "Chatamic Starter Kit"
         }
+    },
+    "require": {
+        "openai-php/laravel": "^0.3.0"
     }
 }
