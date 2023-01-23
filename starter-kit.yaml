@@ -1,0 +1,17 @@
+export_paths:
+  - app/Contracts/EntryContract.php
+  - app/Contracts/OpenAIContract.php
+  - app/Http/Controllers/ChatamicController.php
+  - app/Http/Requests/OpenAIExecuteRequest.php
+  - app/Services/EntryService.php
+  - app/Services/OpenAIService.php
+  - config/openai.php
+  - content
+  - resources/blueprints
+  - resources/js/site.js
+  - resources/views
+  - routes/web.php
+  - .env.example
+  - README.md
+dependencies:
+  openai-php/laravel: ^0.3.0

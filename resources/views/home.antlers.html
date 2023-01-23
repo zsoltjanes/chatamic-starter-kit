@@ -1,0 +1,31 @@
+<div class="relative flex items-top min-h-screen justify-center sm:items-center py-4 sm:pt-0">
+    <div class="container mx-auto sm:px-5 lg:px-7 space-y-4 py-3">
+        <div class="text-center py-3 text-gray-900">
+            <h1 class="text-7xl font-bold">Chatamic</h1>
+            <h2>OpenAI GPT-3 Chat Prompt</h2>
+        </div>
+        <form action="{{ route:chatamic.execute }}" method="post">
+            {{ csrf_field }}
+            <div class="w-full rounded-md p-4 h-full">
+                <div class="relative bg-white rounded-md p-2">
+                    <input class="outline-none p-2 rounded-md text-gray-700 w-full required" type="text" name="prompt" placeholder="Ask anything..." value="{{ input }}">
+                    <button class="absolute top-0 bottom-0 right-0 p-2 rounded-md bg-purple-500 text-white m-2">Submit</button>
+                </div>
+                {{ get_errors:all }}
+                    <div class="bg-red-100 border text-red-700 px-3 py-3 rounded relative mt-3" role="alert">
+                        <strong class="font-bold">Oops, something went wrong!</strong>
+                            <ul>
+                                {{ messages }}
+                                    <li>{{ message }}</li>
+                                {{ /messages }}
+                            </ul>
+                        </span>
+                    </div>
+                {{ /get_errors:all }}
+                {{ if reply }}
+                    <div class="bg-white rounded-md p-4 mt-2" id="reply" data-reply="{{ reply }}"></div>
+                {{ endif }}
+            </div>
+        </form>
+    </div>
+</div>

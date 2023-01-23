@@ -1,0 +1,9 @@
+{
+    "name": "zsoltjanes/chatamic-starter-kit",
+    "extra": {
+        "statamic": {
+            "name": "Chatamic Starter Kit",
+            "description": "Chatamic Starter Kit starter kit"
+        }
+    }
+}

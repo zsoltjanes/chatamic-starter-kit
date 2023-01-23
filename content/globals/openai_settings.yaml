@@ -1,0 +1,7 @@
+title: 'OpenAI settings'
+data:
+  model: text-davinci-003
+  max_tokens: '600'
+  temperature: '0.7'
+  presence_penalty: '0'
+  frequency_penalty: '0'
