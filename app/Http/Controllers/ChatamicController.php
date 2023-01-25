@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\OpenAIExecuteRequest;
 use App\Services\EntryService;
 use App\Services\OpenAIService;
+use Exception;
 use Statamic\View\View;
 
 class ChatamicController extends Controller
@@ -22,9 +23,12 @@ class ChatamicController extends Controller
     {
         $input = $request->get("prompt");
 
-        $response = $this->openAIClient->getResponse($input);
-
-        $reply = $response['choices'][0]['text'];
+        try {
+            $response = $this->openAIClient->getResponse($input);
+            $reply = $response['choices'][0]['text'];
+        } catch (Exception $e) {
+            $reply = $e->getMessage();
+        }
 
         $this->entryService->save($input, $reply);
 
