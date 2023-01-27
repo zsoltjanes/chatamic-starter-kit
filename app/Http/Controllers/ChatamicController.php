@@ -11,6 +11,7 @@ use Statamic\View\View;
 class ChatamicController extends Controller
 {
     private OpenAIService $openAIClient;
+
     private EntryService $entryService;
 
     public function __construct(OpenAIService $openAIClient, EntryService $entryService)
@@ -21,7 +22,7 @@ class ChatamicController extends Controller
 
     public function execute(OpenAIExecuteRequest $request): View
     {
-        $input = $request->get("prompt");
+        $input = $request->get('prompt');
 
         try {
             $response = $this->openAIClient->getResponse($input);

@@ -9,7 +9,7 @@ class EntryService implements EntryContract
 {
     public function save(string $input, string $reply)
     {
-        $title = str_slug(now() . '-' . $input);
+        $title = str_slug(now().'-'.$input);
 
         $entry = Entry::make()
             ->collection('conversations')

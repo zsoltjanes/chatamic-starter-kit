@@ -7,6 +7,9 @@
         }
     },
     "require": {
-        "openai-php/laravel": "^0.3.0"
-    }
+        "openai-php/laravel": "^0.3.0",
+        "statamic/cms": "~3.3.0 || ~3.4.0"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }

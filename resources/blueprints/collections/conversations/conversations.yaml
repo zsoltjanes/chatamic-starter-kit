@@ -8,6 +8,8 @@ sections:
         field:
           type: text
           required: true
+          validate:
+            - required
       -
         handle: input
         field:
@@ -37,10 +39,4 @@ sections:
         handle: slug
         field:
           type: slug
-          localizable: true
-      -
-        handle: template
-        field:
-          type: template
-          display: Template
           localizable: true

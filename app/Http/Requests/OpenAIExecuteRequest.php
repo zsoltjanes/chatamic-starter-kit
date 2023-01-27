@@ -24,7 +24,7 @@ class OpenAIExecuteRequest extends FormRequest
     public function rules()
     {
         return [
-            'prompt' => ['required', 'max:4097']
+            'prompt' => ['required', 'max:4097'],
         ];
     }
 }
